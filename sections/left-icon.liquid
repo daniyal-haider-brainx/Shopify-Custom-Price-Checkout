@@ -1,0 +1,215 @@
+<style>
+  .left-icon-section{
+    background:{{section.settings.icb-sec-bg}};
+    padding: 50px 0px;
+  }
+.left-icon-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1170px;
+    margin: auto;
+}
+  .left-icon-box {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-content: center;
+    align-items: center;
+}
+  .left-icon-wrapper {
+    padding-right: 100px;
+}
+  a.left-icon-btn {
+    background: #2e4b31;
+    color: #fff;
+    padding: 10px 30px;
+    margin-top: 20px;
+}
+  .left-cont-area h3 {
+    margin-bottom: -6px;
+}
+  .left-cont-area {
+    margin-left: 20px;
+}
+.left-icon-area img {
+    width: 80px;
+}
+  .left-icon-box {
+    margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+ .left-icon-col {
+    grid-template-columns: 1fr;
+}
+  .left-icon-wrapper {
+    padding: 0px 30px;
+}
+  .left-cont-area h3 {
+    font-size: 17px;
+}
+  .left-icon-grid {
+    padding: 0px 30px;
+    margin-top: 40px;
+}
+  .left-icon-wrapper h2 {
+    font-size: 24px;
+}
+.left-cont-area p {
+    font-size: 13px;
+}
+}
+
+  
+@media only screen and (max-width: 600px) {
+ .left-icon-col {
+    grid-template-columns: 1fr;
+}
+   .left-cont-area h3 {
+    font-size: 17px;
+}
+.left-cont-area p {
+    font-size: 13px;
+}
+  .left-icon-wrapper {
+    padding: 0px 30px;
+}
+  .left-icon-grid {
+    padding: 0px 30px;
+    margin-top: 40px;
+}
+  .left-icon-wrapper h2 {
+    font-size: 24px;
+}
+}
+
+
+  
+</style>
+
+<div class="left-icon-section">
+  <div class="left-icon-col">
+  <div class="left-icon-wrapper" >
+        <h2> {{ section.settings.t1 }}</h2>
+        <p>{{ section.settings.cont }}</p>
+        <p style="text-align: right;">{{ section.settings.ot }}</p>
+        <p style="margin-bottom: 30px; text-align: right;">{{ section.settings.bn }}</p>
+    
+        <a class="left-icon-btn" href="{{ section.settings.btu }}">{{ section.settings.bt }}</a>
+  </div>
+
+<div class="left-icon-grid">
+      
+    {%- for block in section.blocks -%}{%- case block.type -%}
+    {%- when 'left-icon' -%}
+      
+    <div class="left-icon-box">
+      
+      <div class="left-icon-area">
+       {% if block.settings.icon-img %}
+        <img src="{{ block.settings.icon-img | img_url: 'master' }}" />
+      {%- endif -%}
+      </div>
+      
+      <div class="left-cont-area">
+        <h3>{{ block.settings.ic-tit }}</h3>
+        <p>{{ block.settings.icon-cont }}</p>
+      </div>
+      
+    </div>
+ {%- endcase -%}
+ {%- endfor -%}
+      
+</div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "rh left icon",
+    "settings": [
+      {
+        "type": "color",
+        "id": "icb-sec-bg",
+        "label": "Section BG"
+      },
+      {
+        "id": "t1",
+        "type": "text",
+        "label": "Main Title",
+        "default": "Title"
+      },
+       {
+        "type": "richtext",
+        "id": "cont",
+        "label": "Add Your Content",
+        "default": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
+              },
+      {
+        "id": "ot",
+        "type": "text",
+        "label": "Owner Name",
+        "default": "Title"
+      },
+
+      {
+        "id": "bn",
+        "type": "text",
+        "label": "Brand Name",
+        "default": "Title"
+      },
+      {
+        "id": "bt",
+        "type": "text",
+        "label": "Button Text",
+        "default": "Title"
+      },
+      {
+        "type" : "url",
+        "id" : "btu",
+        "label" : "Button Link"
+        }
+      
+    ],
+     "blocks":[
+	   {
+          "type": "left-icon",
+          "name": "left-icon",
+          "settings": [
+              {
+              "id": "icon-img",
+              "type": "image_picker",
+              "label": "Custom Icon Image"
+              },
+              {
+                "type": "text",
+                "id": "ic-tit",
+                "label": "Icon Title",
+                "default": "Icon Title"
+              },
+            
+              {
+                  "type": "richtext",
+                  "id": "icon-cont",
+                  "label": "Add Your Review",
+                  "default": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
+              }
+          ]
+       }
+	  
+	],
+    "presets": [
+      {
+        "name": "rh left icon",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

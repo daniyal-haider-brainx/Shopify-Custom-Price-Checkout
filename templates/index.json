@@ -1,0 +1,313 @@
+{
+  "sections": {
+    "b76eae71-d058-48c3-9fd2-c22f72644015": {
+      "type": "video",
+      "settings": {
+        "subheading": "MODERN STYLE",
+        "title": "LED FLOATING SHELVES",
+        "st": "Handcrafted to your specific sizing with integrated LED lighting",
+        "bt": "Buy Now",
+        "bl": "https:\/\/lyonscrafted.com\/products\/maple-led-floating-shelf-modern",
+        "video_url": "https:\/\/youtu.be\/51LGDGZtkg4",
+        "image": "shopify:\/\/shop_images\/LYONS_CRAFTED_-_LED_SHELVES-30.webp",
+        "background_type": "full_width",
+        "video_size": "medium",
+        "autoplay": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "f0957ba2-0fe1-4be3-8740-1b687c67b4a7": {
+      "type": "icon-box",
+      "blocks": {
+        "5faaa861-0c6c-4fd1-9db1-cf1e2e2d660c": {
+          "type": "Icon-Box",
+          "settings": {
+            "icon-icon": "fa fa-flag",
+            "ic-tit": "Handcrafted in the USA",
+            "icon-cont": "<p>Everything we sell is meticulously crafted by our small team of skilled woodworkers. All orders ship from our work shop in Oxnard California.<\/p>"
+          }
+        },
+        "3ab50986-3341-48d0-8a0f-6c0dfbd26f49": {
+          "type": "Icon-Box",
+          "settings": {
+            "icon-icon": "fa fa-smile-o",
+            "ic-tit": "Custom made just for you",
+            "icon-cont": "<p>Every shelf is made to order, meaning you get the ability to customize your shelf however you need.<\/p>"
+          }
+        },
+        "89057cb7-840f-4a91-a151-42e8c5f17ec0": {
+          "type": "Icon-Box",
+          "settings": {
+            "icon-icon": "fa fa-wrench",
+            "ic-tit": "Easy installation",
+            "icon-cont": "<p>Our floating shelf and bracket design makes installing AND adjusting incredibly easy, making sure your shelves fit just where you need them to.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "5faaa861-0c6c-4fd1-9db1-cf1e2e2d660c",
+        "3ab50986-3341-48d0-8a0f-6c0dfbd26f49",
+        "89057cb7-840f-4a91-a151-42e8c5f17ec0"
+      ],
+      "settings": {
+        "icb-sec-bg": "#f1f1f1",
+        "t1": "Why choose us?",
+        "box-bg": "#ffffff",
+        "icon-bg": "#69816b",
+        "icon-color": "#ffffff"
+      }
+    },
+    "c5d2b118-a1a9-4770-b157-b53d50917319": {
+      "type": "home-custom-block-baner",
+      "blocks": {
+        "4e224b2b-1806-495a-a344-c2265ed82779": {
+          "type": "smallImg",
+          "settings": {
+            "banner_is": "left",
+            "image": "shopify:\/\/shop_images\/LIGHTSHELVES-4_1024x1024_crop_center_5fd1e7a3-9ded-4fde-b7b7-43f54668d8ca.webp",
+            "content_style": "style_1",
+            "bg_banner_content": "#fcf7f2",
+            "banner_heading": "CHOOSE YOUR TONE",
+            "font_size_banner_heading": "46px",
+            "font_size_banner_heading_mb": "28px",
+            "color_banner_heading": "#2e4b31",
+            "banner_heading_sub": "RUSTIC STYLE",
+            "font_size_banner_heading_sub": "14px",
+            "font_size_banner_heading_sub_mb": "48px",
+            "banner_heading_sub_margin": "12px",
+            "banner_heading_sub_margin_mb": "12px",
+            "color_banner_heading_sub": "#232323",
+            "banner_des": "Choose between warm white 3000k, soft and neutral 4000k, or 6000k for a cool daylight tone",
+            "font_size_banner_des": "16px",
+            "font_size_banner_des_mb": "16px",
+            "color_banner_des": "#232323",
+            "banner_button": "Buy Now",
+            "link": "shopify:\/\/products\/knotty-pine-led-floating-shelf-rustic",
+            "bg_banner_button": "#2e4b31",
+            "border_banner_button": "#2e4b31",
+            "color_banner_button": "#ffffff",
+            "bg_banner_button_hover": "",
+            "border_banner_button_hover": "",
+            "color_banner_button_hover": "",
+            "video_link": "",
+            "video_icon_color": "#ffffff",
+            "bg_video_icon": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "4e224b2b-1806-495a-a344-c2265ed82779"
+      ],
+      "settings": {
+        "layout": "full",
+        "layout_style": "layout_style_1",
+        "display_bg_banner": false,
+        "bg_color_banner": "#fcf7f2",
+        "widget_title": "",
+        "widget_des": "",
+        "title_style": "style_1",
+        "img_align": "center",
+        "margin_bottom_mb": 25,
+        "margin_bottom_tab": 30,
+        "margin_bottom": 30
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LIGHTSHELVES-4_1024x1024_crop_center_9956f98c-9a68-4bb9-8bd3-b5dde1bfad3e.webp",
+            "tab_label": "Text 1",
+            "subheading": "RUSTIC STYLE",
+            "title": "CHOOSE YOUR TONE",
+            "content": "<p>Choose between warm white 3000k, soft and neutral 4000k, or 6000k for a cool daylight tone<\/p>",
+            "button_text": "Buy Now",
+            "button_link": "https:\/\/lyonscrafted.com\/products\/knotty-pine-led-floating-shelf-rustic"
+          }
+        }
+      },
+      "block_order": [
+        "item-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "text",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "2a771585-7216-42cd-b9ba-88045c65e243": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--16627614384362__2a771585-7216-42cd-b9ba-88045c65e243-1665767082ce05abed-0": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon": "shopify:\/\/shop_images\/stars.jpg",
+            "custom_icon_width": 200,
+            "title": "Top notch quality",
+            "content": "<p>The quality of my shelves is nothing but excellent!! Although the shipping took some time it was well worth the wait! I can’t wait for my next project because now I know I have a company that can make shelving for me when needed customized to my satisfaction!!!!<\/p>",
+            "at": "Shaun"
+          }
+        },
+        "template--16627614384362__2a771585-7216-42cd-b9ba-88045c65e243-1665767082ce05abed-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-phone",
+            "custom_icon": "shopify:\/\/shop_images\/stars.jpg",
+            "custom_icon_width": 200,
+            "title": "Strong and sturdy",
+            "content": "<p>Love, love these shelves. I was concerned that the wall brace would not hold the shelves because I ordered large shelves. They worked perfectly. The shelves are solidly mounted and look great. Two of the shelves that I ordered were a custom size and that seemed like it was no problem. I loved them so much, I plan to order more!<\/p>",
+            "at": "Jennifer"
+          }
+        },
+        "template--16627614384362__2a771585-7216-42cd-b9ba-88045c65e243-1665767082ce05abed-2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-lock",
+            "custom_icon": "shopify:\/\/shop_images\/stars.jpg",
+            "custom_icon_width": 200,
+            "title": "Great customer service",
+            "content": "<p>Great to work with from start to finish. Wanted to match the shelves to my lvp floor. He gave me a great recommendation after I sent him a picture. Love the warmth of the light. Easy wiring. All around very happy with the purchase and the process. Thank you!<\/p>",
+            "at": "Michael"
+          }
+        }
+      },
+      "block_order": [
+        "template--16627614384362__2a771585-7216-42cd-b9ba-88045c65e243-1665767082ce05abed-0",
+        "template--16627614384362__2a771585-7216-42cd-b9ba-88045c65e243-1665767082ce05abed-1",
+        "template--16627614384362__2a771585-7216-42cd-b9ba-88045c65e243-1665767082ce05abed-2"
+      ],
+      "settings": {
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "mt": "WHAT CUSTOMERS ARE SAYING..."
+      }
+    },
+    "68113ec2-a937-404b-a564-a6111800af12": {
+      "type": "left-icon",
+      "blocks": {
+        "2c42e7cd-477c-49f2-ae94-6573d9848fb8": {
+          "type": "left-icon",
+          "settings": {
+            "icon-img": "shopify:\/\/shop_images\/1.png",
+            "ic-tit": "High Quality",
+            "icon-cont": "<p>Every order placed with Lyons Crafted is meticulously handcrafted by our small team in Ventura CA, assuring the highest quality finished product.<\/p>"
+          }
+        },
+        "b12eaa35-315a-4ca6-94ce-ca539cd77cc2": {
+          "type": "left-icon",
+          "settings": {
+            "icon-img": "shopify:\/\/shop_images\/33.png",
+            "ic-tit": "Customizable",
+            "icon-cont": "<p>The beauty of handcrafting each item is that we have the ability to customize your order however you may need it. Need to fit that awkward nook? Need to match your flooring? We got you covered.<\/p>"
+          }
+        },
+        "2144826d-50e7-4a3b-beae-2774fac22d8f": {
+          "type": "left-icon",
+          "settings": {
+            "icon-img": "shopify:\/\/shop_images\/2_8330e7e5-19b4-44dc-bb50-1214a98ed31a.png",
+            "ic-tit": "Convenient",
+            "icon-cont": "<p>You tell us what you want, we make it and deliver it. That simple.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "2c42e7cd-477c-49f2-ae94-6573d9848fb8",
+        "b12eaa35-315a-4ca6-94ce-ca539cd77cc2",
+        "2144826d-50e7-4a3b-beae-2774fac22d8f"
+      ],
+      "settings": {
+        "icb-sec-bg": "",
+        "t1": "WHAT MAKES LYONS CRAFTED SPECIAL?",
+        "cont": "<p>I created Lyons Crafted to be able to provide customers with high quality, handmade, sustainable pieces to not only make their homes more beautiful, but also more functional.<\/p>",
+        "ot": "- Nico Lyons",
+        "bn": "Owner, Lyons Crafted",
+        "bt": "About Us",
+        "btu": "shopify:\/\/pages\/about"
+      }
+    },
+    "f10aa172-f64e-4138-a232-fb026250d12a": {
+      "type": "home-customer-reviews",
+      "blocks": {
+        "template--16627614384362__f10aa172-f64e-4138-a232-fb026250d12a-16655686090e3fad91-0": {
+          "type": "Review",
+          "settings": {
+            "enable_image": false,
+            "reviews_heading": "Top notch quality",
+            "rating": "star5",
+            "reviews_purchased_text": "",
+            "reviews_title": "",
+            "reviews_link": "",
+            "body_review": "The quality of my shelves is nothing but excellent!! Although the shipping took some time it was well worth the wait! I can’t wait for my next project because now I know I have a company that can make shelving for me when needed customized to my satisfaction!!!!",
+            "name": "Shaun",
+            "date_review": ""
+          }
+        },
+        "template--16627614384362__f10aa172-f64e-4138-a232-fb026250d12a-16655686090e3fad91-1": {
+          "type": "Review",
+          "settings": {
+            "enable_image": false,
+            "reviews_heading": "Strong and sturdy",
+            "rating": "star5",
+            "reviews_purchased_text": "",
+            "reviews_title": "",
+            "reviews_link": "",
+            "body_review": "Love, love these shelves. I was concerned that the wall brace would not hold the shelves because I ordered large shelves. They worked perfectly. The shelves are solidly mounted and look great. Two of the shelves that I ordered were a custom size and that seemed like it was no problem. I loved them so much, I plan to order more!",
+            "name": "Jennifer",
+            "date_review": ""
+          }
+        },
+        "template--16627614384362__f10aa172-f64e-4138-a232-fb026250d12a-16655686090e3fad91-2": {
+          "type": "Review",
+          "settings": {
+            "enable_image": false,
+            "reviews_heading": "Great customer service",
+            "rating": "star5",
+            "reviews_purchased_text": "",
+            "reviews_title": "",
+            "reviews_link": "",
+            "body_review": "Great to work with from start to finish. Wanted to match the shelves to my lvp floor. He gave me a great recommendation after I sent him a picture. Love the warmth of the light. Easy wiring. All around very happy with the purchase and the process. Thank you!",
+            "name": "Michael",
+            "date_review": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16627614384362__f10aa172-f64e-4138-a232-fb026250d12a-16655686090e3fad91-0",
+        "template--16627614384362__f10aa172-f64e-4138-a232-fb026250d12a-16655686090e3fad91-1",
+        "template--16627614384362__f10aa172-f64e-4138-a232-fb026250d12a-16655686090e3fad91-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "space_on": 20,
+        "space_below": 25,
+        "bg_color": "#f7f9fb",
+        "layout_style": "style_2",
+        "title": "WHAT CUSTOMERS ARE SAYING...",
+        "des": "",
+        "title_style": "style_1",
+        "per_row": "3"
+      }
+    }
+  },
+  "order": [
+    "b76eae71-d058-48c3-9fd2-c22f72644015",
+    "f0957ba2-0fe1-4be3-8740-1b687c67b4a7",
+    "c5d2b118-a1a9-4770-b157-b53d50917319",
+    "image-with-text",
+    "2a771585-7216-42cd-b9ba-88045c65e243",
+    "68113ec2-a937-404b-a564-a6111800af12",
+    "f10aa172-f64e-4138-a232-fb026250d12a"
+  ]
+}

@@ -1,0 +1,496 @@
+<link rel="stylesheet" href="{{ 'slick.css' | asset_url }}">
+<link rel="stylesheet" href="{{ 'slick-theme.css' | asset_url }}">
+
+
+
+<style>
+  .slick-dots li button {
+    width: 10px !important;
+    height: 10px !important;
+    border: 1px solid #000;
+}
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 100px;
+}
+  .slick-dots li button:before {
+    display: none;
+}
+
+  .slick-dots li {
+    display: inline-block;
+    font-size: 0px;
+    margin: 0 7px;
+    width: 12px !important;
+    height: 12px !important;
+    letter-spacing: normal;
+}
+.widget-title .box-title:before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: #b2b2b2;
+    top: -moz-calc(50% - .5px);
+    top: -webkit-calc(50% - 0.5px);
+    top: -ms-calc(50% - .5px);
+    top: calc(50% - 0.5px);
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+  .body-review span {
+    font-size: 16px;
+}
+  .homepage-reviews .item {
+    text-align: center;
+   
+    padding: 30px;
+    background: #fff;
+   
+    margin-top: 75px;
+    margin-bottom: 5px;
+}
+  .col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+  .widget-title .box-title .title {
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+}
+  .widget-title .box-title {
+    color: #505050;
+    position: relative;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: .05em;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.homepage-reviews  svg {
+    width: 24px;
+    height: 24px;
+}
+  .homepage-reviews .star-reviews, .homepage-reviews .body-review {
+    margin-bottom: 18px;
+}
+  .homepage-reviews svg {
+    fill: #2e4b31 !important;
+}
+  #section-template--16627614384362__f10aa172-f64e-4138-a232-fb026250d12a {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    background-color: #ffffff !important;
+}
+ .slick-dots li.slick-active button {
+    background: #000;
+    border-color: #000;
+}
+  .body-review {
+    font-size: 16px;
+}
+  .homepage-reviews .name-review h5 {
+    color: #2E4B31;
+    font-size: 16px;
+}
+ .slick-dots li button {
+    border: 1px solid #000;
+    background: #fff;
+}
+  .slick-dots li {
+    margin: 0 5px;
+}
+  @media only screen and (max-width: 600px){
+span.title {
+   font-size: 24px !important;
+    line-height: 30px;
+}
+    section#section-template--16627614384362__f10aa172-f64e-4138-a232-fb026250d12a {
+    margin-top: 70px !important;
+}
+    .container-fluid-old {
+    padding: 0;
+}
+  }
+</style>
+
+
+
+
+
+<section class="homepage-reviews {{ section.settings.layout_style }}" id="section-{{section.id}}">
+  {% assign rw = section.settings.per_row %}
+  <div class="container">
+    {% if section.settings.title != blank %}
+    <div class="widget-title{% if section.settings.title_style == 'style_2' %} not-before{% endif %}">   
+      <h3 class="box-title">
+          <span class="title"> 
+            {{ section.settings.title }}
+          </span>
+      </h3>
+      {% if section.settings.des != blank %}
+      <p class="des">
+        {{ section.settings.des }}
+      </p>
+      {% endif %}
+    </div>
+    {% endif %}
+  <div class="row rev">
+      {% for block in section.blocks %}
+      <div class="col">
+        <div class="item ">
+          {% if block.settings.enable_image %}
+          <div class="item-image">
+            {% if section.settings.layout_style == 'style_2' %}
+              {% assign img_size = '250x' %}
+            {% else %}
+              {% assign img_size = '115x' %}
+            {% endif %}
+            {% if block.settings.reviews_image != blank %}
+              <img data-srcset="{{ block.settings.reviews_image | img_url: img_size }}" alt="{{block.settings.reviews_title}}" {% render 'lazyload' %}>
+            {% else %}
+              <div class="not_img">{{img_size}} x {{img_size}}px</div>   
+            {% endif %}
+          </div>
+          {% endif %}
+
+          {% if section.settings.layout_style == 'style_2' %}
+          <div class="star-reviews {{block.settings.rating}}">
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+          </div>
+          {% endif %}
+
+          {% if block.settings.reviews_heading != blank %}
+            <h2 class="heading-review">
+              {% render 'multilang' with block.settings.reviews_heading %}
+            </h2>
+          {% endif %}
+          
+          {% if block.settings.body_review != blank %}
+          <div class="body-review">
+            {% render 'multilang' with block.settings.body_review %}
+          </div>
+          {% endif %}
+          {% if section.settings.layout_style == 'style_1' %}
+          <div class="star-reviews {{block.settings.rating}}">
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+          </div>
+          {% endif %}
+
+          {% if block.settings.reviews_title != blank or block.settings.reviews_purchased_text != blank %}
+          <div class="title-reviews">
+            {% if block.settings.reviews_purchased_text != blank %}
+              <span class="purchased-text">{% render 'multilang' with block.settings.reviews_purchased_text %}</span>
+            {% endif %}
+
+            {% if block.settings.reviews_title != blank %}
+              <a class="title" href="{{block.settings.reviews_link}}" title="{{block.settings.reviews_title}}">
+                <h4>
+                  {% render 'multilang' with block.settings.reviews_title %}
+                </h4>
+              </a>
+            {% endif %}
+          </div>
+          {% endif %}   
+
+          {% if block.settings.name != blank %}
+          <div class="name-review">
+            <h5>
+              {% render 'multilang' with block.settings.name %}
+            </h5>
+          </div>
+          {% endif %}
+          
+          {% if block.settings.date_review != blank %}
+            <p class="date-review">
+              {% render 'multilang' with block.settings.date_review %}
+            </p>
+          {% endif %}
+
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+<style>
+  #section-{{section.id}}{
+    margin-top: {{ section.settings.space_on }}px;
+    margin-bottom: {{ section.settings.space_below }}px;
+    background-color: {{ section.settings.bg_color }};
+    font-size: 12px
+  }
+button.slick-next.slick-arrow {
+    display: none !important;
+}
+  button.slick-prev.slick-arrow.slick-disabled {
+    display: none !important;
+}
+  button.slick-prev.slick-arrow {
+    display: none !important;
+}
+  {% if settings.layout_home == 'layout_home_14' %}
+    @media (max-width: 768px) {
+      #section-{{section.id}}{
+        margin-bottom: {{ section.settings.space_below }}px !important;
+      }
+    }
+  {% endif %}
+</style>
+
+
+
+
+{% schema %}
+  {
+    "name": "Customer Reviews",
+   "max_blocks": 10,
+    "settings": [
+      {
+        "type": "range",
+        "id": "space_on",
+        "label": "Space on",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "space_below",
+        "label": "Space below",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 25
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default": "#f7f9fb"
+      },
+      {
+        "type": "select",
+        "id": "layout_style",
+        "label": "Layout Style:",
+        "options": [
+            {
+                "value": "style_1",
+                "label": "Style 1" 
+            },
+            { 
+                "value": "style_2",
+                "label": "Style 2" 
+            }          
+        ],
+        "default": "style_1"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Customer Reviews"
+      },
+      {
+        "type": "text",
+        "id": "des",
+        "label": "Content"
+      },
+      {
+        "type": "select",
+        "id": "title_style",
+        "label": "Title Style:",
+        "options": [
+            {
+                "value": "style_1",
+                "label": "Style 1" 
+            },
+            { 
+                "value": "style_2",
+                "label": "Style 2" 
+            }          
+        ],
+        "default": "style_1"
+      },
+     {
+        "type": "select",
+        "id": "per_row",
+        "label": "Customer review per row",
+        "options": [
+         {
+            "value": "1",
+            "label": "1"
+          },
+         {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          },
+          {
+            "value": "5",
+            "label": "5"
+          }
+        ],
+        "default": "3"
+     }
+  ],
+    "blocks": [
+      {
+        "type": "Review",
+        "name": "Review",
+        "settings": [
+          {
+            "type" : "image_picker",
+            "id" : "reviews_image",
+            "label" : "Select Image"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_image",
+            "label": "Enable Image?",
+            "default": true
+          },
+          {
+            "type" : "text",
+            "id" : "reviews_heading",
+            "label" : "Heading",
+            "default" : "Awesome..."
+          },
+          {
+            "type": "select",
+            "id": "rating",
+            "label": "Rating",
+            "options": [
+              { "value": "star0", "label": "0 star" },
+              { "value": "star1", "label": "1 star" },
+              { "value": "star2", "label": "2 star" },
+              { "value": "star3", "label": "3 star" },
+              { "value": "star4", "label": "4 star" },
+              { "value": "star5", "label": "5 star" }
+            ],
+            "default": "star5"
+          },
+          {
+            "type" : "text",
+            "id" : "reviews_purchased_text",
+            "label" : "Purchased text",
+            "default" : "Purchased:"
+          },
+          {
+            "type" : "text",
+            "id" : "reviews_title",
+            "label" : "Title",
+            "default" : "Title"
+          },
+          {
+            "type" : "url",
+            "id" : "reviews_link",
+            "label" : "Link"
+          },
+          {
+            "type": "textarea",
+            "id": "body_review",
+            "label": "Content of Review",
+            "default": "Nam tempus turpis at metus scelerisque placerat nulla deumantos delo sollicitudin delos felis. Pellentesque diam dolor an elementum et lobortis at mollis ut risus. Curabitur semper sagittis mi condimentum..."
+          },
+          {
+            "type" : "text",
+            "id" : "name",
+            "label" : "Customer Name",
+            "default" : "Customer Name"
+          },
+          {
+            "type" : "text",
+            "id" : "date_review",
+            "label" : "Date",
+            "default" : "Wednesday, Jan 26, 2019"
+          }
+        ]
+      } 
+    ],
+    "presets": [
+    {
+      "name": "Custom Block Reviews",
+      "category": "Reviews",
+      "blocks": [
+          {
+            "type": "Review"
+          },
+          {
+            "type": "Review"
+          },        
+          {
+            "type": "Review"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+  <script src="{{ 'slick.js' | asset_url }}"></script>
+<script>
+$('.rev').slick({
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+  
+</script>

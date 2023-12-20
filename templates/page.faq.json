@@ -1,0 +1,94 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "page_width": "medium"
+      }
+    },
+    "438e2cc5-30fc-4480-80bb-6110f6209c31": {
+      "type": "two-col-faq",
+      "blocks": {
+        "template--16627614646506__438e2cc5-30fc-4480-80bb-6110f6209c31-1667268090769cbda6-1": {
+          "type": "question",
+          "settings": {
+            "title": "How do I install my shelf?",
+            "answer": "<p>Our shelves are easily installed using a wooden bracket that is included with your purchase. This bracket will be found inside the shelf once you receive your order. Simply slide the bracket out, screw it to the studs in your wall (making sure it is level), slide the shelf onto the bracket, and screw the shelf into the bracket from the top. Check out our installation videos here<br\/><a href=\"https:\/\/lyonscrafted.com\/pages\/installation-videos\" target=\"_blank\">https:\/\/lyonscrafted.com\/pages\/installation-videos<\/a><\/p>"
+          }
+        },
+        "template--16627614646506__438e2cc5-30fc-4480-80bb-6110f6209c31-1667268090769cbda6-2": {
+          "type": "question",
+          "settings": {
+            "title": "How do the LED shelves work?",
+            "answer": "<p>Each shelf comes with a non dimmable driver so you may wire the shelf directly to standard 110-120VAC power. Simply install the shelf bracket, slide the shelf onto the bracket, and connect the two wires from the shelf driver to the 2 wires coming out from your wall (these wires will need to be ran by your electrician from your power source to the shelf location). Your electrician may install a wall switch to allow easy control of power to all the shelves in your install at once.<\/p>"
+          }
+        },
+        "template--16627614646506__438e2cc5-30fc-4480-80bb-6110f6209c31-1667268090769cbda6-4": {
+          "type": "question",
+          "settings": {
+            "title": "What is included?",
+            "answer": "<p>Each order will come with:<br\/>-The handmade shelf in the sizing and finish you order<br\/>- Wooden mounting bracket (cleat for shelves up to 10\" deep, cleat with arms for shelves 10\" deep and over)<br\/>- Mounting hardware (for mounting to wood studs)<br\/><br\/><em><strong>(AND if you ordered an LED shelf)<\/strong><\/em><\/p><p>-LED strip and diffuser embedded into the shelf<br\/>- Non-dimmable driver \/ transformer<\/p>"
+          }
+        },
+        "a84bb149-49d2-429e-876c-e22016d50483": {
+          "type": "question",
+          "settings": {
+            "title": "What is the weight limit?",
+            "answer": "<p>These shelves are extremely sturdy when mounted to studs, and able to easily hold large amounts of plates, glassware, bottles, books etc. We recommend a weight limit of 20 lbs per stud that the bracket is installed to. <a href=\"https:\/\/lyonscrafted.com\/products\/metal-brackets\" target=\"_blank\">Click here to add custom metal brackets and increase weight limit from 20 to 50lbs per stud installed to!<\/a><\/p>"
+          }
+        },
+        "9edeb8f4-43f5-4ea6-9d29-05e9c16236b5": {
+          "type": "right-question",
+          "settings": {
+            "title": "How long will it take to receive my shelves?",
+            "answer": "<p>Our current processing time is 3-5 weeks. Shipping takes an additional 2-7 business days<\/p>"
+          }
+        },
+        "e09f2ac8-80dc-4ae6-a4c0-6eb28c3d6345": {
+          "type": "right-question",
+          "settings": {
+            "title": "What if I am unsure about finish?",
+            "answer": "<p>Please don't hesitate to send us a message so we can help you choose the perfect finish. We're happy to give recommendations based off photos you have or links to items you're trying to match. We also sell samples <a href=\"https:\/\/theshelfspot.com\/collections\/finish-samples\" target=\"_self\">here<\/a>.<\/p>"
+          }
+        },
+        "14e7fdf4-d326-40ed-b4ed-7997c082bdd9": {
+          "type": "right-question",
+          "settings": {
+            "title": "Is any size possible?",
+            "answer": "<p>Maximum recommended depth with a 2.5\" thickness is 12\"<br\/>Minimum require thickness is 2.5\"<br\/>Maximum length is 96\"<\/p>"
+          }
+        },
+        "f435c892-f629-404b-a64a-305fc327f427": {
+          "type": "right-question",
+          "settings": {
+            "title": "What if I need to return it?",
+            "answer": "<p>We are confident you're going to love your shelves however if you have any issues we are happy to help. We will gladly ship you a replacement within 5-7 days if your order is in any way not as described. If you prefer a refund and your order is within our <a href=\"https:\/\/theshelfspot.com\/pages\/shipping-returns\" target=\"_self\">return guidelines <\/a>then simply contact us within 3 days of delivery and we will walk you through the process of returning. All returns are subject to a 25% restocking fee.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16627614646506__438e2cc5-30fc-4480-80bb-6110f6209c31-1667268090769cbda6-1",
+        "template--16627614646506__438e2cc5-30fc-4480-80bb-6110f6209c31-1667268090769cbda6-2",
+        "template--16627614646506__438e2cc5-30fc-4480-80bb-6110f6209c31-1667268090769cbda6-4",
+        "a84bb149-49d2-429e-876c-e22016d50483",
+        "9edeb8f4-43f5-4ea6-9d29-05e9c16236b5",
+        "e09f2ac8-80dc-4ae6-a4c0-6eb28c3d6345",
+        "14e7fdf4-d326-40ed-b4ed-7997c082bdd9",
+        "f435c892-f629-404b-a64a-305fc327f427"
+      ],
+      "settings": {
+        "show_navigation": false,
+        "title": "FAQ",
+        "content": "",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "438e2cc5-30fc-4480-80bb-6110f6209c31"
+  ]
+}

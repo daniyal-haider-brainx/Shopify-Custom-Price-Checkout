@@ -1,0 +1,52 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "page_width": "medium"
+      }
+    },
+    "102bc53e-91f5-4e3c-851f-8a08e4a43f80": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "content": "<ol><li>On <a href=\"https:\/\/lyonscrafted.com\" title=\"https:\/\/lyonscrafted.com\">Lyonscrafted.com<\/a> navigate to the listing you purchased from.<\/li><li>Scroll towards the bottom of the page and find the reviews section.<\/li><li>Next to <strong>Product Reviews<\/strong> click the green button labeled <strong>Write a review<\/strong>.<\/li><li>Choose a star rating next to <strong>Rating<\/strong>.<\/li><li>In <strong>Summary<\/strong> let us know what you think about your new custom shelves!<\/li><li>Add a photo or video to your review (necessary to receive reimbursement).<\/li><li>Select <strong>Submit<\/strong>. <\/li><li>Take a screenshot of your review and email it to marketing@lyonscrafted.com<\/li><\/ol>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "left",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "4a254009-dca7-40b5-91f9-f23816c907d5": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "That's it!",
+        "content": "<p>Once we receive your photo confirmation we will review the content and reimburse you up to $20. Minimum reimbursement for a photo or video review is $5 and maximum is $20. <\/p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "102bc53e-91f5-4e3c-851f-8a08e4a43f80",
+    "4a254009-dca7-40b5-91f9-f23816c907d5"
+  ]
+}

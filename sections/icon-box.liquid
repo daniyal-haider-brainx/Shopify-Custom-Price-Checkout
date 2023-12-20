@@ -1,0 +1,189 @@
+<link rel="stylesheet" href="{{ 'fontawesome.css' | asset_url }}">
+
+<style>
+  .icon-box-section{
+    background:{{section.settings.icb-sec-bg}};
+    padding: 80px 0px;
+  }
+
+.icon-box-section h2 {
+    text-align: center;
+  margin-bottom: 50px;
+}
+.icon-box-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+  .icon-box h3 {
+    margin: 0;
+    margin-top: 10px;
+}
+
+.icon-box {
+    text-align: center;
+    padding: 10px 30px 20px 30px;
+    margin: 0px 15px;
+    background: {{section.settings.box-bg}};
+}
+.icon-box-wrapper {
+    max-width: 1170px;
+    display: block;
+    margin: auto;
+}
+
+.rh-icon {
+    background: {{section.settings.icon-bg}};
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-bottom: 30px;
+    margin-top: 35px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 35px;
+    color:{{section.settings.icon-color}};
+    font-size: 20px;
+}
+  
+  
+@media only screen and (max-width: 768px) {
+ .icon-box-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+.icon-box-wrapper {
+    padding: 0px 20px;
+}
+.icon-box-section h2 {
+    margin-bottom: 30px;
+}
+.icon-box-section {
+    padding: 60px 0px;
+}
+}
+
+
+  
+@media only screen and (max-width: 600px) {
+ .icon-box-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+.icon-box-wrapper {
+    padding: 0px 20px;
+}
+.icon-box-section h2 {
+    margin-bottom: 30px;
+}
+.icon-box-section {
+    padding: 60px 0px;
+}
+}
+
+
+  
+</style>
+
+<div class="icon-box-section">
+  <div class="icon-box-wrapper" >
+        <h2> {{ section.settings.t1 }}</h2>
+
+    <div class="icon-box-grid">
+      
+    {%- for block in section.blocks -%}{%- case block.type -%}
+    {%- when 'Icon-Box' -%}
+      
+    <div class="icon-box">
+      <div class="rh-icon">
+        <i class="{{ block.settings.icon-icon }}"></i>
+      </div>
+        
+        <h3>{{ block.settings.ic-tit }}</h3>
+        <p>{{ block.settings.icon-cont }}</p>
+    </div>
+ {%- endcase -%}
+ {%- endfor -%}
+      
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "rh icon box",
+    "settings": [
+      {
+        "type": "color",
+        "id": "icb-sec-bg",
+        "label": "Section BG"
+      },
+      {
+        "id": "t1",
+        "type": "text",
+        "label": "Main Title",
+        "default": "Title"
+      },
+      {
+        "type": "color",
+        "id": "box-bg",
+        "label": "Box BG"
+      },
+      {
+        "type": "color",
+        "id": "icon-bg",
+        "label": "Icon BG"
+      },
+      {
+        "type": "color",
+        "id": "icon-color",
+        "label": "Icon Color"
+      }
+      
+    ],
+     "blocks":[
+	   {
+          "type": "Icon-Box",
+          "name": "Icon-Box",
+          "settings": [
+              {
+              "id": "icon-icon",
+              "type": "text",
+              "label": "Add Icon Class",
+              "info":"Find Icon All Classes Here https://fontawesome.com/v4/icons/"
+              },
+              {
+                "type": "text",
+                "id": "ic-tit",
+                "label": "Icon Title",
+                "default": "Icon Title"
+              },
+              {
+                  "type": "richtext",
+                  "id": "icon-cont",
+                  "label": "Add Your Review",
+                  "default": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
+              }
+          ]
+       }
+	  
+	],
+    "presets": [
+      {
+        "name": "rh icon box",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

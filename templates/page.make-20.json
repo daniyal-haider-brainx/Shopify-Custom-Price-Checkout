@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "page_width": "medium"
+      }
+    },
+    "8bd4e32a-8b00-467e-8b62-909d11aa3664": {
+      "type": "promotion-blocks",
+      "blocks": {
+        "template--16856201658602__8bd4e32a-8b00-467e-8b62-909d11aa3664-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_3149cf7c-2608-49a3-880c-3c744a6d4035.jpg",
+            "highlight": false,
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "https:\/\/lyonscrafted.com\/pages\/make-20-lyonscrafted",
+            "link_style": "link",
+            "text_position": "middle_center",
+            "background": "#2e4b31",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#1e316a"
+          }
+        },
+        "dd001520-8b53-4050-bde4-72b6c0125579": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled-1_326bf558-f514-4b42-85c1-f2ff1a0361e6.jpg",
+            "highlight": false,
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "shopify:\/\/pages\/make-20-etsy",
+            "link_style": "link",
+            "text_position": "middle_center",
+            "background": "#eb6d20",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--16856201658602__8bd4e32a-8b00-467e-8b62-909d11aa3664-image-1",
+        "dd001520-8b53-4050-bde4-72b6c0125579"
+      ],
+      "settings": {
+        "subheading": "Choose where you placed your order",
+        "title": "",
+        "section_size": "medium",
+        "stack_on_mobile": true,
+        "background": "#e8e6e1",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "8bd4e32a-8b00-467e-8b62-909d11aa3664"
+  ]
+}

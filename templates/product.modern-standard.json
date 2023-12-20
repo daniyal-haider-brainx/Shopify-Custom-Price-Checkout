@@ -1,0 +1,235 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "atc_button_background": "rgba(0,0,0,0)",
+            "atc_button_text_color": "rgba(0,0,0,0)",
+            "buy_now_button_background": "rgba(0,0,0,0)",
+            "buy_now_button_text_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons"
+      ],
+      "settings": {
+        "show_vendor": false,
+        "show_sku": false,
+        "show_taxes_included": false,
+        "show_product_rating": true,
+        "show_sticky_add_to_cart": false,
+        "show_share_buttons": true,
+        "help_page": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "show_thumbnails_on_mobile": false,
+        "desktop_thumbnails_position": "bottom",
+        "transition_effect": "slide"
+      }
+    },
+    "product-content": {
+      "type": "product-content",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "description"
+      ],
+      "settings": {
+      }
+    },
+    "b9d6d32e-26bf-47a7-a228-eec50093e90d": {
+      "type": "rh-finish",
+      "blocks": {
+        "template--16639850447082__b9d6d32e-26bf-47a7-a228-eec50093e90d-1667340533f901a40c-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/modern-finish-key-1656533981912.webp",
+            "tab_label": "",
+            "subheading": "",
+            "title": "Choosing your finish",
+            "content": "<p>We're more than happy to send you more photos of a certain finish before you order. We always recommend ordering a finish sample before purchasing shelving, here is a link to order samples<br\/><a href=\"https:\/\/theshelfspot.com\/collections\/finish-samples\/products\/maple-finish-samples\" target=\"_self\">Click here<\/a><\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16639850447082__b9d6d32e-26bf-47a7-a228-eec50093e90d-1667340533f901a40c-0"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "3f683c6b-156f-44c2-97be-2c4053a30717": {
+      "type": "icon-box",
+      "blocks": {
+        "abe02b58-7295-4d55-a3e8-93b62639e3eb": {
+          "type": "Icon-Box",
+          "settings": {
+            "icon-icon": "fa fa-flag",
+            "ic-tit": "Handcrafted in the USA",
+            "icon-cont": "<p>Everything we sell is meticulously crafted by our small team of skilled woodworkers. All orders ship from our work shop in Oxnard California.<\/p>"
+          }
+        },
+        "88ab9d99-a314-4f53-a406-1fb188bff624": {
+          "type": "Icon-Box",
+          "settings": {
+            "icon-icon": "fa fa-smile",
+            "ic-tit": "Custom made just for you",
+            "icon-cont": "<p>Every shelf is made to order, meaning you get the ability to customize your shelf however you need.<\/p>"
+          }
+        },
+        "7c385b89-3e1f-4584-8049-da04576fb731": {
+          "type": "Icon-Box",
+          "settings": {
+            "icon-icon": "fa fa-wrench",
+            "ic-tit": "Easy installation",
+            "icon-cont": "<p>Our floating shelf and bracket design makes installing AND adjusting incredibly easy, making sure your shelves fit just where you need them to.<br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "abe02b58-7295-4d55-a3e8-93b62639e3eb",
+        "88ab9d99-a314-4f53-a406-1fb188bff624",
+        "7c385b89-3e1f-4584-8049-da04576fb731"
+      ],
+      "settings": {
+        "icb-sec-bg": "#f4f4f4",
+        "t1": "Why choose us?",
+        "box-bg": "#ffffff",
+        "icon-bg": "#69816b",
+        "icon-color": "#ffffff"
+      }
+    },
+    "0920fd16-9d25-4bb3-bbf3-5b3464140973": {
+      "type": "two-col-faq",
+      "blocks": {
+        "template--16639850447082__0920fd16-9d25-4bb3-bbf3-5b3464140973-166734051753adc419-1": {
+          "type": "question",
+          "settings": {
+            "title": "How do I install my shelf?",
+            "answer": "<p>Our shelves are easily installed using a wooden bracket that is included with your purchase. This bracket will be found inside the shelf once you receive your order. Simply slide the bracket out, screw it to the studs in your wall (making sure it is level), slide the shelf onto the bracket, and screw the shelf into the bracket from the top. Check out our installation videos here<br\/><a href=\"\/pages\/installation-videos\" title=\"Installation Videos\">https:\/\/lyonscrafted.com\/pages\/installation-videos<\/a><\/p>"
+          }
+        },
+        "template--16639850447082__0920fd16-9d25-4bb3-bbf3-5b3464140973-166734051753adc419-2": {
+          "type": "question",
+          "settings": {
+            "title": "How do the LED shelves work?",
+            "answer": "<p>Each shelf comes with a non dimmable driver so you may wire the shelf directly to standard 110-120VAC power. Simply install the shelf bracket, slide the shelf onto the bracket, and connect the two wires from the shelf driver to the 2 wires coming out from your wall (these wires will need to be ran by your electrician from your power source to the shelf location). Your electrician may install a wall switch to allow easy control of power to all the shelves in your install at once.<\/p>"
+          }
+        },
+        "template--16639850447082__0920fd16-9d25-4bb3-bbf3-5b3464140973-166734051753adc419-4": {
+          "type": "question",
+          "settings": {
+            "title": "What is included?",
+            "answer": "<p>Each order will come with:<br\/>-The handmade shelf in the sizing and finish you order<br\/>- Wooden mounting bracket (cleat for shelves up to 10\" deep, cleat with arms for shelves 10\" deep and over)<br\/>- Mounting hardware (for mounting to wood studs)<br\/><\/p>"
+          }
+        },
+        "139c8495-9857-4c1a-aafc-073824a6175a": {
+          "type": "question",
+          "settings": {
+            "title": "What is the weight limit?",
+            "answer": "<p>These shelves are extremely sturdy when mounted to studs, and able to easily hold large amounts of plates, glassware, bottles, books etc. We recommend a weight limit of 20 lbs per stud that the bracket is installed to. <a href=\"https:\/\/lyonscrafted.com\/products\/metal-brackets\" target=\"_blank\">Click here to add custom metal brackets and increase weight limit from 20 to 50lbs per stud installed to!<\/a><\/p>"
+          }
+        },
+        "ebc4101a-41ac-470b-9ea9-4aadf520c006": {
+          "type": "right-question",
+          "settings": {
+            "title": "How long will it take to receive my shelves?",
+            "answer": "<p>Our current processing time is 3-5 weeks. Shipping takes an additional 2-7 business days<\/p>"
+          }
+        },
+        "7faef541-6837-48ee-b14d-16664203c76f": {
+          "type": "right-question",
+          "settings": {
+            "title": "What if I am unsure about finish?",
+            "answer": "<p>Please don't hesitate to send us a message so we can help you choose the perfect finish. We're happy to give recommendations based off photos you have or links to items you're trying to match. We also sell samples here..<\/p>"
+          }
+        },
+        "0c447236-f152-4dec-8159-e1206c7e3f7e": {
+          "type": "right-question",
+          "settings": {
+            "title": "Is any size possible?",
+            "answer": "<p>Maximum recommended depth with a 2.5\" thickness is 12\"<br\/>Minimum require thickness is 2.5\"<br\/>Maximum length is 96\"<\/p>"
+          }
+        },
+        "8076d7dc-a9c2-463d-9f7d-a2b9971dc7b7": {
+          "type": "right-question",
+          "settings": {
+            "title": "What if I need to return it?",
+            "answer": "<p>We are confident you're going to love your shelves however if you have any issues we are happy to help. We will gladly ship you a replacement within 5-7 days if your order is in any way not as described. If you prefer a refund and your order is within <a href=\"\/pages\/shipping-returns\" title=\"Shipping & Returns\">our return guidelines<\/a> then simply contact us within 3 days of delivery and we will walk you through the process of returning. All returns are subject to a 25% restocking fee.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16639850447082__0920fd16-9d25-4bb3-bbf3-5b3464140973-166734051753adc419-1",
+        "template--16639850447082__0920fd16-9d25-4bb3-bbf3-5b3464140973-166734051753adc419-2",
+        "template--16639850447082__0920fd16-9d25-4bb3-bbf3-5b3464140973-166734051753adc419-4",
+        "139c8495-9857-4c1a-aafc-073824a6175a",
+        "ebc4101a-41ac-470b-9ea9-4aadf520c006",
+        "7faef541-6837-48ee-b14d-16664203c76f",
+        "0c447236-f152-4dec-8159-e1206c7e3f7e",
+        "8076d7dc-a9c2-463d-9f7d-a2b9971dc7b7"
+      ],
+      "settings": {
+        "show_navigation": false,
+        "title": "FAQ",
+        "content": "",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1665615288030bd6cc": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-content",
+    "b9d6d32e-26bf-47a7-a228-eec50093e90d",
+    "3f683c6b-156f-44c2-97be-2c4053a30717",
+    "0920fd16-9d25-4bb3-bbf3-5b3464140973",
+    "1665615288030bd6cc"
+  ]
+}

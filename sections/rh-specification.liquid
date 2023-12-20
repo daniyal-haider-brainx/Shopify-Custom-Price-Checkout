@@ -1,0 +1,102 @@
+<style>
+  .spec-gird {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0px 10px;
+    grid-column-gap: 30px;
+}
+  
+  .rh-spec-section {
+    padding-bottom: 50px;
+    display: block;
+    margin: auto;
+    max-width: 1170px;
+}
+  .grid-one .html {
+    background: #f9fafb;
+    font-size: 15px;
+    line-height: 25px;
+}
+table {
+    width: 100%;
+    border-spacing: 0;
+  border-collapse: collapse;
+  border: 2px solid #e0e0e0;
+}
+th {
+    background: #f9fafb;
+    font-weight: 700;
+}
+td, th {
+    min-width: 50px;
+    padding: 10px 15px;
+    text-align: inherit;
+}
+  td {
+    border-top: 1px solid rgba(34,36,38,.1);
+}
+
+@media only screen and (max-width: 600px) {
+ .spec-gird {
+   
+    grid-template-columns: 1fr;
+    padding: 0px 10px;
+    grid-column-gap: 30px;
+}
+  .grid-one {
+    margin-bottom: 30px;
+}
+}
+
+
+  
+</style>
+
+<div class="rh-spec-section"> 
+  <div class="rh-spec-section-wrap">
+    <div class="spec-gird">
+
+        <div class="grid-one">
+           {%- if section.settings.html != blank -%}
+              <div class="html">
+                  {{- section.settings.html -}}
+                </div>
+           {%- endif -%}
+        </div>
+
+        <div  class="grid-two">
+         {%- if section.settings.spec-img != blank -%}
+              <img class="grid-two-img" src="{{ section.settings.spec-img | img_url:'master' }}" />
+         {%- endif -%}
+        </div>
+      
+      </div>
+    
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "rh-specification",
+  "class": "shopify-section-rh-specification",
+  "settings": [
+    {
+      "type": "html",
+      "id": "html",
+      "label": "HTML",
+      "default": "<p style=\"text-align: center\">Write or copy/paste HTML code</p>"
+    },
+    {
+          "type": "image_picker",
+          "id": "spec-img",
+          "label": "Image",
+          "info": ".jpg recommended"
+    }
+  ],
+  "presets": [
+    {
+      "name": "rh-specification"
+    }
+  ]
+}
+{% endschema %}
