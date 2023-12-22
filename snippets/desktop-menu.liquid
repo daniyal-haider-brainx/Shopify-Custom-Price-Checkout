@@ -1,5 +1,10 @@
 <desktop-navigation>
   <ul class="header__linklist list--unstyled {% unless bottom_navigation %}hidden-pocket hidden-lap{% endunless %}" role="list">
+    <li class="header__linklist-item">
+      <a id="customize_link" class="header__linklist-link" href="http://localhost:3000/">
+        Custom Product
+      </a>
+    </li>
     {%- for link in menu.links -%}
       {%- assign link_title_downcase = link.title | strip | downcase -%}
       {%- assign mega_menu_block = '' -%}
@@ -15,6 +20,7 @@
       {%- endfor -%}
 
       <li class="header__linklist-item {% if link.links.size > 0 or mega_menu_block != '' %}has-dropdown{% endif %}" data-item-title="{{ link.title | escape }}">
+      
         <a class="header__linklist-link link--animated" href="{{ link.url }}" {% if link.links.size > 0 or mega_menu_block != '' %}aria-controls="desktop-menu-{{ forloop.index }}" aria-expanded="false"{% endif %}>
           {{- link.title -}}
         </a>
@@ -128,7 +134,11 @@
             {%- endfor -%}
           </ul>
         {%- endif -%}
+        
       </li>
+      
     {%- endfor -%}
+
   </ul>
+  
 </desktop-navigation>

@@ -1,3 +1,7 @@
+{%- assign custom_product = 'television' -%}
+{% assign custom_total_price = 0 %}
+{% assign other_products_total_price = 0 %}
+
 <section>
   <div class="container container--medium">
     {%- if cart.item_count > 0 -%}
@@ -77,6 +81,9 @@
               </thead>
 
               <tbody class="line-item-table__list">
+                {%- assign custom_total_price = 0 %}
+                {%- assign other_products_total_price = 0 %}
+
                 {%- for line_item in cart.items -%}
                   <tr class="line-item">
                     <td class="line-item__product">
@@ -139,6 +146,8 @@
                         {%- endcapture -%}
 
                         <div class="line-item__info">
+
+                          {%for prop in line_item.properties %} <li>{{prop[1] }}</li> {%endfor %}
                           <div class="product-item-meta">
                             {%- if settings.show_vendor -%}
                               {%- assign vendor_handle = line_item.vendor | handle -%}
@@ -171,8 +180,6 @@
                                     {%- if property.last == blank or first_character_in_key == '_' -%}
                                       {%- continue -%}
                                     {%- endif -%}
-
-                                    <li class="line-item__property">{{ property.first }}: {{ property.last }}</li>
                                   {%- endfor -%}
                                 </ul>
                               {%- endunless -%}
@@ -189,10 +196,22 @@
                                 {{- line_price -}}
                                 {{- unit_price -}}
                               </div>
-
                               <div class="price-list hidden-phone">
-                                {{- price -}}
+                                {%for prop in line_item.properties %}
+                                {% if line_item.product.handle == custom_product %}
+                                  {% assign custom_price = prop[1]| times: line_item.quantity %}
+                                  
+                                  {% assign custom_total_price = custom_total_price | plus: custom_price %}
+                                  {% if custom_price > 0 %}
+                                    <span class="price price--highlight">{{ custom_price | money_with_currency | replace: '.', '' }}</span>
+                                  {% else %}
+                                    {{- line_price -}}
+                                  {% endif %}
+                                {% else %}
+                                  {{- line_price -}}
+                                {% endif %}
                                 {{- unit_price -}}
+                             {%endfor %}
                               </div>
                             </div>
                           </div>
@@ -269,7 +288,23 @@
                       {%- endif -%}
 
                       <div class="price-list price-list--stack">
-                        {{- line_price -}}
+                               {% assign custom_price = 0 %}
+                        
+                        {% for prop in line_item.properties %}
+                          {% if line_item.product.handle == custom_product %}
+                            {% assign custom_price = prop[1] | times: line_item.quantity %}
+                          {% endif %}
+                        {% endfor %}
+                        
+                        {% assign actual_price = line_item.product.price | times: line_item.quantity %}
+                        {% assign regular_price = line_price | plus: actual_price %}
+                        
+                        {% if line_item.product.handle == custom_product %}
+                          <span class="price price--highlight">{{ custom_price | money | remove: '.' }}</span>
+                        {% else %}
+                          <span class="price">{{ actual_price | money | remove: '.00' }}</span>
+                        {% endif %}
+                        
                       </div>
                     </td>
                   </tr>
@@ -327,9 +362,22 @@
                       <div class="cart__recap-block" {{ block.shopify_attributes }}>
                         <div class="cart__total-container">
                           <span class="heading h6">{{ 'cart.general.total' | t }}</span>
-                          <span class="heading h6">{{ cart.total_price | money_with_currency }}</span>
+                          {% liquid %}
+                          {%- assign custom_total_price = 0.00 -%}
+                          {%- assign custom_price_product = 0.00 -%}
+                          {%- for line_item in cart.items -%}
+                            {%- if line_item.product.handle == custom_product -%}
+                              {% for prop in line_item.properties %}
+                                {%- assign custom_price_product =  prop[1] | times: line_item.quantity | times: 100 -%}
+                                {%- assign custom_total_price = custom_total_price | plus: custom_price_product -%}
+                              {% endfor %}
+                            {%- else -%}
+                              {%- assign custom_total_price = custom_total_price | plus: line_item.final_line_price -%}
+                            {%- endif -%}
+                          {%- endfor -%}
+                          {%- assign checkout_total = custom_total_price -%}
+                            <span class="heading h6">  {{- checkout_total | money_with_currency }}</span>
                         </div>
-
                         {%- if cart.cart_level_discount_applications != blank -%}
                           <ul class="cart__discount-list list--unstyled" role="list">
                             {%- for discount_application in cart.cart_level_discount_applications -%}

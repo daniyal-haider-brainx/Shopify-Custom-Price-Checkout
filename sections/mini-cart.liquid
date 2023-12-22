@@ -1,3 +1,5 @@
+{%- assign custom_total_price = 0 -%}
+{%- assign custom_product = 'television' -%}
 <cart-drawer section="{{ section.id }}" id="mini-cart" class="mini-cart drawer drawer--large">
   <span class="drawer__overlay"></span>
 
@@ -72,7 +74,7 @@
               <span class="shipping-bar__text text--small">{{ 'cart.general.free_shipping' | t }}</span>
             {%- else -%}
               {%- capture remaining_amount -%}{{ calculated_total_price | minus: threshold_in_cents | abs | money }}{%- endcapture -%}
-              <span class="shipping-bar__text text--small">{{ 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount }}</span>
+              <span class="shipping-bar__text text--small">{{ 'cart.general.free_shipping_remaining_html' | t: remainingline_amount: remaining_amount }}</span>
             {%- endif -%}
 
             <span class="shipping-bar__progress"></span>
@@ -251,7 +253,23 @@
                 {%- endif -%}
 
                 <div class="price-list price-list--stack">
-                  {{- line_price -}}
+                  {% assign custom_price = 0 %}
+                        
+                  {% for prop in line_item.properties %}
+                    {% if line_item.product.handle == custom_product %}
+                      {% assign custom_price = prop[1] | times: line_item.quantity %}
+                    {% endif %}
+                  {% endfor %}
+                  
+                  {% assign actual_price = line_item.product.price | times: line_item.quantity %}
+                  {% assign regular_price = line_price | plus: actual_price %}
+                  
+                  {% if line_item.product.handle == custom_product %}
+                    <span class="price price--highlight">{{ custom_price | money | remove: '.' }}</span>
+                  {% else %}
+                    <span class="price">{{ actual_price | money | remove: '.00' }}</span>
+                  {% endif %}
+                  
                 </div>
               </div>
             </div>
@@ -343,15 +361,30 @@
           {%- endif -%}
         </div>
       {%- endif -%}
-
       {%- if section.settings.show_checkout_button -%}
+        {%- assign custom_total_price = 0 -%}
+        {% assign other_products_total_price = 0 %}
+        
+        {%- assign custom_total_price = 0.00 -%}
+        {%- assign custom_price_product = 0.00 -%}
+        {%- for line_item in cart.items -%}
+          {%- if line_item.product.handle == custom_product -%}
+            {% for prop in line_item.properties %}
+              {%- assign custom_price_product =  prop[1] | times: line_item.quantity | times: 100 -%}
+              {%- assign custom_total_price = custom_total_price | plus: custom_price_product -%}
+            {% endfor %}
+          {%- else -%}
+            {%- assign custom_total_price = custom_total_price | plus: line_item.final_line_price -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- assign checkout_total = custom_total_price -%}
         <button form="mini-cart-form" type="submit" class="checkout-button button button--primary button--full" name="checkout">
           <span class="checkout-button__lock">{%- render 'icon' with 'lock' -%}</span>
-
           {{- 'cart.general.checkout' | t -}}
           <span class="square-separator"></span>
-          {{- cart.total_price | money_with_currency -}}
+          {{- checkout_total |money_with_currency | remove: '.00 '   }}
         </button>
+             
       {%- else -%}
         <a href="{{ routes.cart_url }}" class="button button--primary button--full" data-no-instant>{{ 'cart.general.go_to_cart' | t }}</a>
       {%- endif -%}

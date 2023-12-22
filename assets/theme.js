@@ -1192,7 +1192,7 @@
     }
   };
 
-  // js/custom-element/behavior/loader-button.js
+  // js/custom-element/behavior/loader-buttonloader-button.js
   var LoaderButton = class extends HTMLButtonElement {
     static get observedAttributes() {
       return ["aria-busy"];
@@ -4929,6 +4929,7 @@
       this._updateDynamicCheckoutButton(event.detail.variant);
     }
     _updateAddToCartButton(variant) {
+      
       let addToCartButtonElement = this.querySelector("[data-product-add-to-cart-button]");
       if (!addToCartButtonElement) {
         return;
@@ -5750,8 +5751,10 @@
       this.nextReplacementDelay = 0;
       this.rootDelegate.on("cart:refresh", this._rerenderCart.bind(this));
       this.addEventListener("variant:added", () => this.nextReplacementDelay = 600);
+     
     }
     async _rerenderCart(event) {
+     
       var _a;
       let cartContent = null, html = "";
       if (event.detail && event.detail["cart"] && event.detail["cart"]["sections"]) {
@@ -5783,6 +5786,7 @@
           this.clientWidth;
           this.open = true;
         }
+updateCustomizeLink();
       }, ((_a = event == null ? void 0 : event.detail) == null ? void 0 : _a.replacementDelay) || this.nextReplacementDelay);
       this.nextReplacementDelay = 0;
     }
@@ -6331,3 +6335,28 @@
   })();
 })();
 
+function updateCustomizeLink() {
+    var cookieName = "cart=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var cookieArray = decodedCookie.split(';');
+    var cartValue = null;
+    for (var i = 0; i < cookieArray.length; i++) {
+        var cookie = cookieArray[i].trim();
+        if (cookie.indexOf(cookieName) == 0) {
+            cartValue = cookie.substring(cookieName.length, cookie.length);
+            break;
+        }
+    }
+    if (cartValue !== null) {
+        var customizeLink = document.getElementById("customize_link");
+        if (customizeLink) {
+            var href = customizeLink.getAttribute("href");
+            customizeLink.setAttribute("href", href + "?cart=" + cartValue);
+            console.log("Customize link updated with cart value.");
+        } else {
+            console.log("Element with id 'customize_link' not found.");
+        }
+    } else {
+        console.log("Cart cookie not found.");
+    }
+}
