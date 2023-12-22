@@ -14616,6 +14616,24 @@ shopify-payment-terms {
   top: calc(50% - 56px); /* 56px is the height of a single button */ /* 28px is half the width of button */
   z-index: 1;
 }
+.customized_productButton
+{
+  padding-left: 35px;
+  padding-right: 35px;
+  font-size: calc(var(--base-font-size) - 2px);
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  -webkit-appearance: none;
+  appearance: none;
+  line-height: var(--button-height);
+  padding: 0 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: var(--button-border-radius);
+  color: white;
+  background: black;
+}
 
 @media screen and (max-width: 999px) {
   /* On mobile and tablet we have a very special layout and scrolling pattern. What happens is that by default
